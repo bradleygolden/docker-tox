@@ -7,7 +7,8 @@ RUN pyenv global 2.7.13 3.6.0 3.5.2
 
 RUN pip3 install tox
 
-ONBUILD COPY . /workspace
+ONBUILD ENV $BUILD_PATH
+ONBUILD COPY $BUILD_PATH /workspace
 
 ONBUILD WORKDIR /workspace
 ONBUILD CMD ["tox"]
