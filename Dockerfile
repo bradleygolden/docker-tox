@@ -1,4 +1,4 @@
-FROM docker-pyenv:latest
+FROM bgolden/docker-pyenv:latest
 
 RUN pyenv install 2.7.13
 RUN pyenv install 3.5.2
